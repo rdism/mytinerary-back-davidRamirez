@@ -1,8 +1,8 @@
 import Router from "express";
-import citiesRouter from "./cities.js";
+import routerCities from "./cities.js";
 
-const router = Router();
+const routerIndex = Router();
 
-router.use('/cities', citiesRouter);
+routerIndex.use('/cities', routerCities);
 
-export default router;
+export default routerIndex;

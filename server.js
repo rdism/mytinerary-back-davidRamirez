@@ -2,7 +2,7 @@ import express from "express";
 import "dotenv/config.js";
 import cors from "cors";
 import morgan from "morgan";
-import indexRouter from "./router/index.js";
+import routerIndex from "./router/index.js";
 import bad_request_handler from "./middlewares/bad_request_handler.js";
 import not_found_handler from "./middlewares/not_found_handler.js";
 import error_handler from "./middlewares/error_handler.js";
@@ -15,7 +15,7 @@ server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
 server.use(cors());
 server.use(morgan('dev'));
-server.use('/api', indexRouter);
+server.use('/api', routerIndex);
 
 // MIDDLEWARES
 server.use(bad_request_handler);

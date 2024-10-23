@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
 
-let collection = "Cities";
+let collection = "cities";
 let schema = new Schema({
     name: { type: String, required: true },
     photo: { type: String, required: true },

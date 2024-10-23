@@ -1,7 +1,9 @@
 import { Router } from "express";
+import { allCities, cityByID } from "../controllers/cities/read.js";
 
-const router = Router();
+const routerCities = Router();
 
-// router.get();
+routerCities.get('/all', allCities);
+routerCities.get('/id/:id', cityByID);
 
-export default router;
+export default routerCities;
