@@ -9,7 +9,8 @@ let schema = new Schema({
     description: { type: String, required: true },
     currency: { type: String, required: true }
 }, {
-    timestamps: true
+    timestamps: true,
+    bufferCommands: false
 });
 
 let City = model(collection, schema);
